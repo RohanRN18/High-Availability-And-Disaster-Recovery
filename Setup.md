@@ -37,17 +37,6 @@ ________________________________________
   	
 4.	Repeat steps in Region B, but update User Data:
                               echo "Welcome to Virginia Region" > /var/www/html/index.html
-
-
-Mumbai Region
-<img width="940" height="417" alt="image" src="https://github.com/user-attachments/assets/682d47fd-f77e-4d4e-851c-75dd65217f6e" />
-
-<img width="940" height="433" alt="image" src="https://github.com/user-attachments/assets/d1517e05-a0b6-45c6-8404-53447dc0b815" />
-Virginia Region
-<img width="940" height="411" alt="image" src="https://github.com/user-attachments/assets/0f44323b-9ad8-4018-af41-284e9b74e73a" />
-
-<img width="940" height="435" alt="image" src="https://github.com/user-attachments/assets/34473966-473b-4a77-8b5d-9d2190606478" />
-
 ________________________________________
 
 🌐 Step 3: Setup Target Group and Load Balancers
@@ -63,15 +52,7 @@ ________________________________________
             o	Listener → HTTP (80) forward to Target Group.
   	
 3.	Repeat the same steps in Region B.
-   
-Mumbai Region
-<img width="940" height="432" alt="image" src="https://github.com/user-attachments/assets/6a54d915-fceb-4a2b-8aab-92fc039c1ab7" />
-<img width="940" height="426" alt="image" src="https://github.com/user-attachments/assets/7c0a527c-b795-457d-9f87-0b148c15018d" />
-
-Virginia Region
-<img width="940" height="429" alt="image" src="https://github.com/user-attachments/assets/4f571bd9-290e-43a3-b60d-2ec85d7cc5d0" />
-<img width="940" height="439" alt="image" src="https://github.com/user-attachments/assets/d5e0fa53-2418-4f99-ae0b-254ae91bcda5" />
-________________________________________
+   __________________________
 
 🌍 Step 4: Configure Route 53 for Failover
 =
@@ -90,17 +71,7 @@ ________________________________________
 
             o	If Region A is UP → traffic goes to Region A.
             o	If Region A is DOWN → Route 53 sends traffic to Region B.
-<img width="940" height="425" alt="image" src="https://github.com/user-attachments/assets/23181bac-f1be-4b35-8e76-e506a01614a0" />
 
-Mumbai region
-<img width="940" height="431" alt="image" src="https://github.com/user-attachments/assets/340ca53d-d1e3-48fb-9a95-6864c0cb647c" />
-
-<img width="940" height="407" alt="image" src="https://github.com/user-attachments/assets/44aee759-2ae2-42ce-874c-d8e8893000ca" />
-
-Virginia Region
-<img width="940" height="420" alt="image" src="https://github.com/user-attachments/assets/3dedd7e6-80df-42cf-882d-f62376518438" />
-
-<img width="940" height="421" alt="image" src="https://github.com/user-attachments/assets/a22da82d-d5bb-4d00-af21-e2add9a32639" />
 ________________________________________
 
 🔍 Step 5: Testing Disaster Recovery
@@ -108,15 +79,6 @@ ________________________________________
 •	Stop all EC2 instances in Region A → Route 53 will failover to Region B.
 
 •	Restart Region A instances → traffic will return to primary region.
-
-Mumbai Region
-<img width="940" height="343" alt="image" src="https://github.com/user-attachments/assets/ad31e783-ff8d-457a-a77c-ca86b663b224" />
-
-Mumbai region stopped getting an error 
-<img width="940" height="415" alt="image" src="https://github.com/user-attachments/assets/0545bc5f-3ada-4072-af8e-c72a6c96906b" />
-
-Virginia Region
-<img width="940" height="236" alt="image" src="https://github.com/user-attachments/assets/c66d86a5-dd16-4421-a0bd-675209297ad7" />
 
 ________________________________________
 
