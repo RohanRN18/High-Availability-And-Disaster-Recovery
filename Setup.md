@@ -1,5 +1,5 @@
 
-🏗️ Step 1: Create VPCs in Two Regions
+Step 1: Create VPCs in Two Regions
 =
 1.	Go to VPC Dashboard.
    
